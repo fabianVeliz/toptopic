@@ -6,6 +6,7 @@ Dependencies
 
  - Ruby 2.1.3
  - Rails 4.2
+ - Mongoid 4.0.0
 
 Quick start
 -------
@@ -28,7 +29,7 @@ You also have to set up all environment variables and config your database setti
 ```
 [toptopic]/
 └── config/
-    ├── database.yml       -> Database configuration.
+    ├── mongoid.yml        -> Database configuration.
     └── application.yml    -> Environment variables here.
 ```
 
