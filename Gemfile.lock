@@ -82,7 +82,15 @@ GEM
       thor (~> 0.14)
     globalid (0.3.5)
       activesupport (>= 4.1.0)
+    has_scope (0.6.0)
+      actionpack (>= 3.2, < 5)
+      activesupport (>= 3.2, < 5)
     i18n (0.7.0)
+    inherited_resources (1.6.0)
+      actionpack (>= 3.2, < 5)
+      has_scope (~> 0.6.0.rc)
+      railties (>= 3.2, < 5)
+      responders
     jquery-rails (4.0.3)
       rails-dom-testing (~> 1.0)
       railties (>= 4.2.0)
@@ -228,6 +236,7 @@ DEPENDENCIES
   factory_girl_rails (~> 4.0)
   ffaker
   figaro
+  inherited_resources
   jquery-rails
   materialize-sass (= 0.95.3.4)
   mongoid (= 4.0.0)

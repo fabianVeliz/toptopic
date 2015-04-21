@@ -19,6 +19,7 @@ gem 'devise'
 # Plugins
 gem 'figaro'
 gem 'decent_exposure'
+gem 'inherited_resources'
 
 # Frontend
 gem 'sass-rails',       '~> 5.0'
