@@ -1,0 +1,23 @@
+h1 Listing topics
+
+table
+  thead
+    tr
+      th Title
+      th Description
+      th
+      th
+      th
+
+  tbody
+    - collection.each do |topic|
+      tr
+        td = topic.title
+        td = topic.description
+        td = link_to 'Show', admin_topic_path(topic)
+        td = link_to 'Edit', edit_admin_topic_path(topic)
+        td = link_to 'Destroy', admin_topic_path(topic), data: {confirm: 'Are you sure?'}, method: :delete
+
+br
+
+= link_to 'New Topic', new_admin_topic_path
