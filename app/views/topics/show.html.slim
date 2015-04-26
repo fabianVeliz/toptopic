@@ -2,5 +2,23 @@ h1 Show Topic
 
 = render topic
 
+h2 Comments
+
+ul
+  - comments.each do |comment|
+    li = comment.body
+
+- if user_signed_in?
+  h3 Give us your comment
+  = render 'comments/form'
+- else
+  |You must be logged to comment.
+  br
+  = link_to 'Sign In', new_user_session_path
+  |&nbsp;Or&nbsp;
+  = link_to 'Sign Up', new_user_registration_path
+
+
+br
 br
 = link_to 'Back', root_path

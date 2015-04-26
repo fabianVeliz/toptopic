@@ -8,5 +8,7 @@ class Topic
 
   slug :title
 
+  has_many :comments
+
   scope :latest, -> { order(created_at: :desc) }
 end

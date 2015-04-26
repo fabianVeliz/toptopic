@@ -7,7 +7,9 @@ Rails.application.routes.draw do
     resources :topics
   end
 
-  resources :topics, only: [:index, :show], param: :slug
+  resources :topics, only: [:index, :show], param: :slug do
+    resources :comments, only: [:create]
+  end
 
   root 'topics#index'
 end

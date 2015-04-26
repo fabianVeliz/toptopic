@@ -1,0 +1,8 @@
+= form_for(comment, url: topic_comments_path(topic)) do |f|
+  .fields
+    .field
+      = f.label :body
+      = f.text_field :body
+  .actions
+    .action
+      = f.submit
