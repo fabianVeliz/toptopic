@@ -34,6 +34,7 @@ gem 'aws-sdk',          '< 2.0'
 
 # Development and Test tools
 group :development, :test do
+  gem 'pry-rails'
   gem 'puma'
   gem 'quiet_assets'
   gem 'factory_girl_rails', '~> 4.0'
