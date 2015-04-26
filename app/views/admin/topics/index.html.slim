@@ -8,6 +8,7 @@ table
       th
       th
       th
+      th
 
   tbody
     - collection.each do |topic|
@@ -17,6 +18,7 @@ table
         td = link_to 'Show', admin_topic_path(topic)
         td = link_to 'Edit', edit_admin_topic_path(topic)
         td = link_to 'Destroy', admin_topic_path(topic), data: {confirm: 'Are you sure?'}, method: :delete
+        td = link_to 'Show comments', admin_topic_comments_path(topic)
 
 br
 

@@ -4,7 +4,11 @@ Rails.application.routes.draw do
 
   namespace 'admin' do
     resources :users, only: :index
-    resources :topics
+    resources :topics do
+      resources :comments, only: [:index, :show]
+    end
+
+    root 'topics#index'
   end
 
   resources :topics, only: [:index, :show], param: :slug do

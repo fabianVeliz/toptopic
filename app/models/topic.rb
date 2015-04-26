@@ -8,8 +8,8 @@ class Topic
 
   slug :title
 
-  has_many :comments
-  has_many :favorites
+  has_many :comments, dependent: :destroy
+  has_many :favorites, dependent: :destroy
 
   scope :latest, -> { order(created_at: :desc) }
 end
