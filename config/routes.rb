@@ -8,8 +8,10 @@ Rails.application.routes.draw do
   end
 
   resources :topics, only: [:index, :show], param: :slug do
-    resources :comments, only: [:create]
+    resources :comments,  only: :create
   end
+
+  resources :favorites, only: [:create, :destroy], param: :slug
 
   root 'topics#index'
 end

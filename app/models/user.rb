@@ -17,4 +17,9 @@ class User
   field :last_sign_in_ip,    type: String
 
   has_many :comments
+  has_many :favorites
+
+  def is_already_favorite?(topic_id)
+    favorites.where(topic_id: topic_id).first != nil
+  end
 end
