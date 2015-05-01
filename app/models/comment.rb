@@ -5,4 +5,5 @@ class Comment
 
   belongs_to :user
   belongs_to :topic
+  has_many :reports
 end

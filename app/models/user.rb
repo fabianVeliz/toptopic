@@ -18,8 +18,13 @@ class User
 
   has_many :comments
   has_many :favorites
+  has_many :reports
 
   def is_already_favorite?(topic_id)
     favorites.where(topic_id: topic_id).first != nil
+  end
+
+  def has_reported?(comment_id)
+    reports.where(comment_id: comment_id).first != nil
   end
 end

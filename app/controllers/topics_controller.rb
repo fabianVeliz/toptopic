@@ -4,6 +4,7 @@ class TopicsController < ApplicationController
   expose(:comments) { topic.comments }
   expose(:comment)  { Comment.new }
   expose(:favorite) { Favorite.new }
+  expose(:report)   { Report.new }
 
   def index; end
   def show; end
