@@ -1,15 +1,18 @@
-h1 Listing comments
+h1.title-section
+  span Listing comments
+  - unless all
+    = link_to 'Back', admin_topics_path, class: 'btn green action'
 
-table
+table.table
   thead
     tr
       th Body
-      th
+      - unless all
+        th Actions
 
   tbody
     - comments.each do |comment|
       tr
         td = comment.body
-        td = link_to 'Show', admin_topic_comment_path(topic_id, comment)
-
-= link_to 'Back', admin_topics_path
+        - unless all
+          td = link_to 'Show', admin_topic_comment_path(topic_id, comment), class: 'btn green action'

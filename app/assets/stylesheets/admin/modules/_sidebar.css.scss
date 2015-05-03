@@ -1,0 +1,48 @@
+.sidebar {
+  background-color: $C_SOFT_PURPLE;
+  position: absolute;
+  width: 240px;
+  top: 42px;
+  bottom: 30px;
+
+  .sidebar-user {
+    background-color: $C_PURPLE;
+    padding: 20px;
+    text-align: center;
+    color: $C_WHITE;
+  }
+
+  .sidebar-navigation {
+    padding: 0 10px;
+
+    .sidebar-block{
+      padding: 10px 0;
+
+      h2 {
+        color: #6F737E;
+        font-weight: 600;
+        font-size: em(14px);
+        margin-bottom: 10px;
+      }//h2
+
+      ul li {
+        margin-bottom: 5px;
+
+        &.active {
+          background-color: $C_GREEN;
+        }//li.active
+
+        a{
+          color: $C_WHITE;
+          padding: 10px;
+          display: block;
+          font-weight: 600;
+        }//a
+
+      }//ul li
+
+    }//.sidebar-navigation .sidebar-block
+
+  }//.sidebar-navigation
+
+}//sidebar

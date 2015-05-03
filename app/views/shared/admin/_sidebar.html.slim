@@ -1,0 +1,17 @@
+.sidebar
+  .sidebar-user
+    = current_admin.email
+  .sidebar-navigation
+    .sidebar-block
+      h2 NAVIGATION
+
+      ul id="js-pages-list"
+
+        li data-page="topics"
+          = link_to 'Topics', admin_topics_path
+
+        li data-page="users"
+          = link_to 'Users', admin_users_path
+
+        li data-page="comments"
+          = link_to 'All Comments', admin_all_comments_path

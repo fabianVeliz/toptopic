@@ -8,10 +8,11 @@ ul
   - comments.each do |comment|
     li
       div = comment.body
-      - unless current_user.has_reported?(comment.id)
-        = button_to 'Report', reports_path(comment: comment, slug: topic.slug)
-      - else
-        |Reported!
+      - if user_signed_in?
+        - unless current_user.has_reported?(comment.id)
+          = button_to 'Report', reports_path(comment: comment, slug: topic.slug)
+        - else
+          |Reported!
 
 - if user_signed_in?
   h3 Give us your comment

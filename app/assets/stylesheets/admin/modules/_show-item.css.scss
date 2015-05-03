@@ -1,0 +1,20 @@
+.show-item {
+  font-size: em(14px);
+
+  .row {
+    margin-bottom: 15px;
+
+    &.img {
+      margin-top: 20px;
+      text-align: center;
+
+      img {
+        display: inline-block;
+        width: 100%;
+      }//img
+
+    }
+
+  }//.row
+
+}//.show-item

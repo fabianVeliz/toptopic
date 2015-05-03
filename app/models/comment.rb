@@ -6,4 +6,6 @@ class Comment
   belongs_to :user
   belongs_to :topic
   has_many :reports
+
+  validates :body, presence: true
 end

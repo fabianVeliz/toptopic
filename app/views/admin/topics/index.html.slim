@@ -1,6 +1,8 @@
-h1 Listing topics
+h1.title-section
+  span Listing topics
+  = link_to 'New Topic', new_admin_topic_path, class: 'btn green action'
 
-table
+table.table
   thead
     tr
       th Title
@@ -15,11 +17,8 @@ table
       tr
         td = topic.title
         td = topic.description
-        td = link_to 'Show', admin_topic_path(topic)
-        td = link_to 'Edit', edit_admin_topic_path(topic)
-        td = link_to 'Destroy', admin_topic_path(topic), data: {confirm: 'Are you sure?'}, method: :delete
-        td = link_to 'Show comments', admin_topic_comments_path(topic)
+        td = link_to 'Show', admin_topic_path(topic), class: 'btn small blue'
+        td = link_to 'Edit', edit_admin_topic_path(topic), class: 'btn small orange'
+        td = link_to 'Destroy', admin_topic_path(topic), data: {confirm: 'Are you sure?'}, method: :delete, class: 'btn small red'
+        td = link_to 'Show comments', admin_topic_comments_path(topic), class: 'btn small green'
 
-br
-
-= link_to 'New Topic', new_admin_topic_path

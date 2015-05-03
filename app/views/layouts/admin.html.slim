@@ -1,0 +1,26 @@
+doctype html
+html lang="en"
+  head
+    meta charset="UTF-8"
+    title Stock APP
+    = stylesheet_link_tag "admin", media: "all"
+    = javascript_include_tag "admin"
+    = csrf_meta_tags
+  body
+    .container-page
+
+      = render 'shared/admin/header'
+
+      - if alert
+        = alert
+      - if notice
+        = notice
+
+      .l-admin
+        = render 'shared/admin/sidebar'
+        .content
+          = yield
+
+      = render 'shared/admin/footer'
+
+

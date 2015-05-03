@@ -1,0 +1,21 @@
+.l-footer {
+  @include clearfix;
+  background-color: $C_WHITE;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.08);
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  .logo a { padding: 7px 0; }//.logo a
+
+  .copyright {
+    font-size: 1em;
+    line-height: 1em;
+    color: $C_DARK_GRAY_2;
+    padding: 10px 0;
+    display: inline-block;
+  }//.copyright
+
+}//.l-footer

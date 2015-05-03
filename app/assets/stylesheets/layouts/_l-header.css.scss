@@ -1,0 +1,33 @@
+.l-header {
+  @include clearfix;
+  background-color: $C_WHITE;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  z-index: 99999;
+
+  .logo {
+    float: left;
+
+    a { padding: 13px 0; }//a
+
+  }//.logo
+
+  nav {
+    float: right;
+
+    ul li {
+      float: left;
+
+      a {
+        padding: 14px 12px;
+        font-size: 1.2em;
+        display: block;
+        line-height: 1em;
+        color: $C_DARK_GRAY;
+        font-family: $BASE_FONT;
+      }//a
+
+    }//li
+
+  }//nav
+
+}//.l-header

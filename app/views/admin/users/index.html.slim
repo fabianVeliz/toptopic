@@ -1,4 +1,11 @@
-h1 User list
+h1.title-section
+  span Listing users
 
-- collection.each do |user|
-  div = user.email
+table.table
+  thead
+    tr
+      th Email
+  tbody
+    - collection.each do |user|
+      tr
+        td = user.email

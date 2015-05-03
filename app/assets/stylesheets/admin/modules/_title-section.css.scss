@@ -1,0 +1,29 @@
+.title-section {
+  font-size: 1em;
+  line-height: 1em;
+  padding: 10px 0;
+  border-bottom: 1px solid rgb(235, 235, 235);
+  margin-bottom: 10px;
+  min-height: 54px;
+  @include clearfix();
+
+  span {
+    display: inline-block;
+    float: left;
+    font-size: 2.4em;
+    line-height: 1em;
+    color: $C_PURPLE;
+    font-weight: 700;
+    margin-top: 5px;
+  }//span
+
+  .action, .actions {
+    float: right;
+  }//.btn
+
+  .actions .action {
+    margin-left: 5px;
+    float: left;
+  }
+
+}//.title-section

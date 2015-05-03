@@ -1,12 +1,13 @@
-p
-  strong Title:
-  = resource.title
-p
-  strong Description:
-  = resource.description
+h1.title-section
+  span = resource.title
+  .actions
+    = link_to 'Edit', edit_admin_topic_path(resource), class: 'btn orange action'
+    = link_to 'Show comments', admin_topic_comments_path(resource), class: 'btn blue action'
+    = link_to 'Back', admin_topics_path, class: 'btn green action'
 
-= link_to 'Edit', edit_admin_topic_path(resource)
-'|
-= link_to 'Show comments', admin_topic_comments_path(resource)
-'|
-= link_to 'Back', admin_topics_path
+.show-item
+  .row
+    strong Descripción:&nbsp;
+    = resource.description
+
+

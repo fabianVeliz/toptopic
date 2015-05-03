@@ -1,0 +1,20 @@
+.l-header-admin {
+  .logo {
+    width: 240px;
+    text-align: center;
+  }//.logo
+
+  .nav {
+    float: right;
+
+    a {
+      padding: 11px 10px;
+      display: inline-block;
+      font-size: em(14px);
+      color: $C_DARK_GRAY;
+      text-decoration: underline;
+    }
+
+  }//.nav
+
+}//.l-header-admin

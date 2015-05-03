@@ -8,6 +8,8 @@ Rails.application.routes.draw do
       resources :comments, only: [:index, :show]
     end
 
+    get 'all_comments', to: 'comments#all_comments'
+
     root 'topics#index'
   end
 
