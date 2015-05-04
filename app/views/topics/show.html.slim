@@ -31,9 +31,9 @@
         h3 Give us your comment
         = render 'comments/form'
       - else
-        |You must be logged to comment.
-        br
-        = link_to 'Sign In', new_user_session_path
-        |&nbsp;Or&nbsp;
-        = link_to 'Sign Up', new_user_registration_path
+        .legend
+          |You must be logged to comment.&nbsp;
+          = link_to 'Sign In', new_user_session_path
+          |&nbsp;Or&nbsp;
+          = link_to 'Sign Up', new_user_registration_path
 

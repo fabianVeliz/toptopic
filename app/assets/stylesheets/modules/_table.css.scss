@@ -7,8 +7,9 @@
   max-width: 100%;
   margin-bottom: 20px;
   border: $C_LIGHT_GRAY;
+  font-size: em(14px);
 
-  >thead>tr>th {
+  > thead > tr > th {
     vertical-align: bottom;
     border-bottom: 2px solid #ddd;
   }
@@ -19,7 +20,7 @@
     border: 1px solid #ddd;
   }
 
-  >tbody>tr:nth-child(odd) {
+  > tbody > tr:nth-child(odd) {
     background-color: #f9f9f9;
   }
 

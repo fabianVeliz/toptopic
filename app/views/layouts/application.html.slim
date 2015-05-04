@@ -10,11 +10,8 @@ html
 
       = render 'shared/application/header'
 
-      - if notice
-        = notice
-
-      - if alert
-        = alert
+      = render 'shared/notice'
+      = render 'shared/alert'
 
       = yield
 

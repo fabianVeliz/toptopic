@@ -10,6 +10,7 @@
     padding: 20px;
     text-align: center;
     color: $C_WHITE;
+    font-size: 1.4em;
   }
 
   .sidebar-navigation {
@@ -21,7 +22,7 @@
       h2 {
         color: #6F737E;
         font-weight: 600;
-        font-size: em(14px);
+        font-size: em(16px);
         margin-bottom: 10px;
       }//h2
 
@@ -33,6 +34,7 @@
         }//li.active
 
         a{
+          font-size: em(14px);
           color: $C_WHITE;
           padding: 10px;
           display: block;

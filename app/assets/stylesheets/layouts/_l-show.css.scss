@@ -16,7 +16,10 @@
   }//.show-topic
 
   .comments {
-    h2 { margin: 20px 0 10px; }//h2
+    h2 {
+      margin: 20px 0 10px;
+      font-size: 1.8em;
+    }//h2
 
     ul li {
       padding: 10px;
@@ -29,6 +32,7 @@
 
       .report {
         margin-top: 10px;
+        font-size: 1.2em;
 
         div { color: $C_ORANGE; }
 
@@ -46,12 +50,23 @@
   .new-comment {
     margin-top: 20px;
 
-    textarea { margin: 10px 0; padding: 10px; }//textarea
+    h3 { font-size: 1.6em; }//h3
+
+    textarea {
+      margin: 10px 0;
+      padding: 10px;
+      width: 100%;
+    }//textarea
 
     input[type="submit"]{
       @extend .btn;
       background-color: $C_SOFT_BLUE;
     }//input[type="submit"]
+
+    .legend {
+      color: $C_ORANGE;
+      font-size: 1.4em;
+    }//.legend
 
   }//.new-comment
 
