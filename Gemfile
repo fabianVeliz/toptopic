@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
-ruby '2.1.3'
+ruby '2.1.5'
 
 # Rails
-gem 'rails', '4.2'
+gem 'rails', '4.2.1'
 
 # Storage
 gem 'bson_ext'
