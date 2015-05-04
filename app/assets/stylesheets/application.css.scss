@@ -12,10 +12,14 @@
 @import "modules/inner-container";
 @import "modules/logo";
 @import "modules/pagination";
+@import "modules/item";
+@import "modules/favorite";
 
 @import "modules/modifiers";
 
 //Layouts
 @import "layouts/l-header";
 @import "layouts/l-footer";
+@import "layouts/l-home";
+@import "layouts/l-show";
 

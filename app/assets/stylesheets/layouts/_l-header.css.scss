@@ -1,6 +1,6 @@
 .l-header {
   @include clearfix;
-  background-color: $C_WHITE;
+  background-color: $C_SOFT_BLUE;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
   z-index: 99999;
 
@@ -22,7 +22,7 @@
         font-size: 1.2em;
         display: block;
         line-height: 1em;
-        color: $C_DARK_GRAY;
+        color: $C_WHITE;
         font-family: $BASE_FONT;
       }//a
 

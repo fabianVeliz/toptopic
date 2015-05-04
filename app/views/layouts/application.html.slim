@@ -7,13 +7,15 @@ html
     = csrf_meta_tags
   body
     .container-page
+
+      = render 'shared/application/header'
+
       - if notice
-        .notice
-          = notice
+        = notice
 
-      -if alert
-        .alert
-          = alert
+      - if alert
+        = alert
 
-      .content
-        = yield
+      = yield
+
+      = render 'shared/application/footer'

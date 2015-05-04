@@ -1,4 +1,5 @@
-= link_to topic_path(topic) do
+.item
+  = link_to topic_path(topic) do
 
-  div = topic.title
-  div = topic.description
+    .item-title = topic.title
+    .item-description = topic.description

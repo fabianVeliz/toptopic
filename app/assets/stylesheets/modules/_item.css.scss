@@ -1,0 +1,28 @@
+.items { @include clearfix; }
+
+.item {
+  border: 1px solid #eeeeee;
+  display: block;
+  font-family: $BASE_FONT;
+  color: #9c27b0;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.11);
+  position: relative;
+
+  a {
+    padding: 15px 10px 15px;
+    display: block;
+  }
+
+  .item-title {
+    font-size: 1.8em;
+    color: $C_SOFT_BLUE;
+  }
+
+  .item-description {
+    margin-top: 5px;
+    font-size: 1.5em;
+    color: $C_BLUE;
+  }
+
+}//.item

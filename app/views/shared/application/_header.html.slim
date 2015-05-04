@@ -1,10 +1,18 @@
-header.header
+header.l-header
   .inner-container
     .logo
       = link_to 'TopTopic', root_path
 
     nav
       ul
-        li
-          = link_to 'My account', root_path
+        - if user_signed_in?
+          li
+            = link_to 'Edit account', edit_user_registration_path
+          li
+            = link_to 'Sign Out', destroy_user_session_path, method: :delete
+        - else
+          li
+            = link_to 'Sign In', new_user_session_path
+          li
+            = link_to 'Sign Up', new_user_registration_path
 

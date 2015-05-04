@@ -1,6 +1,6 @@
 .l-footer {
   @include clearfix;
-  background-color: $C_WHITE;
+  background-color: $C_SOFT_BLUE;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.08);
 
   position: absolute;
@@ -13,7 +13,7 @@
   .copyright {
     font-size: 1em;
     line-height: 1em;
-    color: $C_DARK_GRAY_2;
+    color: $C_WHITE;
     padding: 10px 0;
     display: inline-block;
   }//.copyright

@@ -1,0 +1,58 @@
+.l-show {
+  @include clearfix;
+  padding-bottom: 20px;
+
+  h1 { margin: 15px 0; }//h1
+
+  .show-topic {
+    position: relative;
+
+    .favorite {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+
+  }//.show-topic
+
+  .comments {
+    h2 { margin: 20px 0 10px; }//h2
+
+    ul li {
+      padding: 10px;
+      border: 1px solid rgb(230, 230, 230);
+      margin-bottom: 10px;
+
+      .body {
+        font-size: 1.4em;
+      }//.body
+
+      .report {
+        margin-top: 10px;
+
+        div { color: $C_ORANGE; }
+
+        input[type="submit"]{
+          @extend .btn;
+          @extend .btn.small;
+          background-color: $C_ORANGE;
+        }//input[type="submit"]
+      }//.report
+
+    }//ul li
+
+  }//.comments
+
+  .new-comment {
+    margin-top: 20px;
+
+    textarea { margin: 10px 0; padding: 10px; }//textarea
+
+    input[type="submit"]{
+      @extend .btn;
+      background-color: $C_SOFT_BLUE;
+    }//input[type="submit"]
+
+  }//.new-comment
+
+}//.l-show

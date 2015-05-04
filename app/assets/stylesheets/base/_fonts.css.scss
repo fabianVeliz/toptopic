@@ -1,1 +1,44 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:100,200,300,400,700);
+
+@font-face {
+  font-family: 'toptopic';
+  src:font-url('fonts/toptopic.eot?vxon4m');
+  src:font-url('fonts/toptopic.eot?#iefixvxon4m') format('embedded-opentype'),
+    font-url('fonts/toptopic.woff?vxon4m') format('woff'),
+    font-url('fonts/toptopic.ttf?vxon4m') format('truetype'),
+    font-url('fonts/toptopic.svg?vxon4m#toptopic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'toptopic';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-star-a1:before {
+  content: "\f005";
+}
+
+.icon-star-a2:before {
+  content: "\f006";
+}
+
+.icon-full-star:before {
+  content: "\e600";
+}
+
+.icon-empty-star:before {
+  content: "\e601";
+}
+
+

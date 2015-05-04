@@ -1,36 +1,39 @@
-h1 Show Topic
+.l-show
+  .inner-container
 
-= render topic
-
-h2 Comments
-
-ul
-  - comments.each do |comment|
-    li
-      div = comment.body
+    h1 Show Topic
+    .show-topic
+      = render topic
       - if user_signed_in?
-        - unless current_user.has_reported?(comment.id)
-          = button_to 'Report', reports_path(comment: comment, slug: topic.slug)
+        - unless current_user.is_already_favorite?(topic.id)
+          = button_to favorites_path(slug: topic.slug), form_class: 'favorite' do
+            i.icon-empty-star
         - else
-          |Reported!
+          = button_to favorite_path(topic.slug), form_class: 'favorite', method: :delete do
+            i.icon-full-star
 
-- if user_signed_in?
-  h3 Give us your comment
-  = render 'comments/form'
-- else
-  |You must be logged to comment.
-  br
-  = link_to 'Sign In', new_user_session_path
-  |&nbsp;Or&nbsp;
-  = link_to 'Sign Up', new_user_registration_path
 
-- if user_signed_in?
-  br
-  - unless current_user.is_already_favorite?(topic.id)
-    = button_to 'Add to favorites ', favorites_path(slug: topic.slug)
-  - else
-    = button_to 'Remove from favorites', favorite_path(topic.slug), method: :delete
+    .comments
+      h2 Comments (#{comments.count})
+      ul
+        - comments.each do |comment|
+          li
+            .body = comment.body
+            - if user_signed_in?
+              .report
+                - unless current_user.has_reported?(comment.id)
+                  = button_to 'Report', reports_path(comment: comment, slug: topic.slug)
+                - else
+                  div Reported!
 
-br
-br
-= link_to 'Back', root_path
+    .new-comment
+      - if user_signed_in?
+        h3 Give us your comment
+        = render 'comments/form'
+      - else
+        |You must be logged to comment.
+        br
+        = link_to 'Sign In', new_user_session_path
+        |&nbsp;Or&nbsp;
+        = link_to 'Sign Up', new_user_registration_path
+

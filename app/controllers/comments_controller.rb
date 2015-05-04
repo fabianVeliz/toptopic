@@ -8,6 +8,8 @@ class CommentsController < ApplicationController
 
     if comment.save
       redirect_to topic_path(topic), notice: 'The comment has been created successfully'
+    else
+      redirect_to topic_path(topic), alert: 'An error has occurred'
     end
   end
 
