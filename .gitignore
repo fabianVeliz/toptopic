@@ -4,5 +4,4 @@
 /log/*.log
 /tmp
 /config/application.yml
-/config/mongoid.yml
 /public/system
