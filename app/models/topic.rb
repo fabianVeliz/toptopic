@@ -11,5 +11,7 @@ class Topic
   has_many :comments, dependent: :destroy
   has_many :favorites, dependent: :destroy
 
+  validates :title, :description, presence: true
+
   scope :latest, -> { order(created_at: :desc) }
 end
