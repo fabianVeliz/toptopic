@@ -40,6 +40,11 @@ group :development, :test do
   gem 'rspec-rails'
 end
 
+# Production
+group :production do
+  gem 'rails_12factor'
+end
+
 # Misc
 group :doc do
   gem 'sdoc', require: false
