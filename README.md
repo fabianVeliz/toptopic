@@ -4,8 +4,8 @@ Toptopic
 Dependencies
 -------
 
- - Ruby 2.1.3
- - Rails 4.2
+ - Ruby 2.1.5
+ - Rails 4.2.1
  - Mongoid 4.0.0
 
 Quick start
