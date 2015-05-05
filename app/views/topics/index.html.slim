@@ -3,4 +3,7 @@
     h1 Listing topics
 
     .items
-      = render topics
+      - if topics.count > 0
+        = render topics
+      - else
+        |There aren't topics
