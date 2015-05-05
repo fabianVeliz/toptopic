@@ -11,7 +11,7 @@ Bundler.require(*Rails.groups)
 
 module Toptopic
   class Application < Rails::Application
-    config.serve_static_assets = true
+    config.serve_static_files = true
     config.generators do |g|
       g.template_engine :slim
 
