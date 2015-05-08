@@ -5,7 +5,7 @@
     .show-topic
       = render topic
       - if user_signed_in?
-        - unless current_user.is_already_favorite?(topic.id)
+        - unless current_user.is_already_favorite?(topic.id.to_s)
           = button_to favorites_path(slug: topic.slug), form_class: 'favorite' do
             i.icon-empty-star
         - else

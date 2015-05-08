@@ -6,6 +6,7 @@ ruby '2.1.5'
 gem 'rails', '4.2.1'
 
 # Storage
+gem 'mongo'
 gem 'bson_ext'
 gem 'mongoid',      '4.0.0'
 

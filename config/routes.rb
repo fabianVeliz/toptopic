@@ -6,7 +6,9 @@ Rails.application.routes.draw do
     resources :users, only: :index
     resources :topics do
       resources :comments, only: [:index, :show]
+      get 'favorite_topics', on: :collection, param: :id
     end
+
 
     get 'all_comments', to: 'comments#all_comments'
 

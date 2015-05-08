@@ -1,0 +1,11 @@
+table.table
+  thead
+    tr
+      th Title
+      th Description
+
+  tbody
+    - favorite_topics_list.each do |topic|
+      tr
+        td = topic.title
+        td = topic.description

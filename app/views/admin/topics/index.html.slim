@@ -1,5 +1,9 @@
 h1.title-section
-  span Listing topics
+  - if defined? title
+    span = title
+  - else
+    span Listing topics
+
   = link_to 'New Topic', new_admin_topic_path, class: 'btn green action'
 
 table.table

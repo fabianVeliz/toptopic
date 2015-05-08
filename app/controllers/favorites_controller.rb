@@ -4,17 +4,17 @@ class FavoritesController < ApplicationController
   expose(:topic){ Topic.find(slug) }
 
   def create
-    unless current_user.is_already_favorite?(topic.id)
-      favorite = current_user.favorites.build(topic_id: topic.id)
-      if favorite.save
+    unless current_user.is_already_favorite?(topic.id.to_s)
+      current_user.favorite_topics_ids.push(topic.id.to_s)
+      if current_user.save
         redirect_to topic_path(slug), notice: 'Your favorite topic has been saved successfully'
       end
     end
   end
 
   def destroy
-    favorite = current_user.favorites.where(topic_id: topic.id).first
-    if favorite.destroy
+    current_user.favorite_topics_ids.delete(topic.id.to_s)
+    if current_user.save
       redirect_to topic_path(slug), notice: 'Your favorite topic has been deleted successfully'
     end
   end

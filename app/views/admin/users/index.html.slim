@@ -5,7 +5,11 @@ table.table
   thead
     tr
       th Email
+      th Actions
   tbody
     - collection.each do |user|
       tr
         td = user.email
+        td = link_to 'Show favorite topics', favorite_topics_admin_topics_path(id: user.id), class: 'btn small green'
+
+

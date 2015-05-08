@@ -8,6 +8,10 @@
     a { color: $C_SOFT_PURPLE }//a
   }//.logo
 
-  .right { padding-right: 10px; }//.right
+  .right {
+    padding-right: 10px;
+
+    .copyright { color: $C_DARK_GRAY; }//.copyright
+  }//.right
 
 }//.l-footer-admin
