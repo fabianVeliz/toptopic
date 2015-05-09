@@ -8,4 +8,8 @@ class Comment
   has_many :reports
 
   validates :body, presence: true
+
+  def reports_count
+    reports.count
+  end
 end
