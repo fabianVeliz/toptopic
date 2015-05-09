@@ -1,18 +1,18 @@
 h1.title-section
-  span Listing comments
-  - unless all
-    = link_to 'Back', admin_topics_path, class: 'btn green action'
+  span = title
+  = link_to 'Back', admin_root_path, class: 'btn green action'
 
 table.table
   thead
     tr
       th Body
-      - unless all
-        th Actions
+      th colspan='2' Actions
 
   tbody
-    - comments.each do |comment|
+    - collection.each do |comment|
       tr
         td = comment.body
-        - unless all
-          td = link_to 'Show', admin_topic_comment_path(topic_id, comment), class: 'btn green action'
+        td = link_to 'Show', admin_comment_path(comment), class: 'btn small green'
+        td = link_to 'Destroy', admin_comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn small red'
+
+

@@ -1,19 +1,39 @@
-class Admin::CommentsController < ActionController::Base
+class Admin::CommentsController < InheritedResources::Base
   before_action :authenticate_admin!
   layout 'admin'
+  actions :index, :show, :destroy
 
-  expose(:topic_id){ params[:topic_id] }
-  expose(:topic)   { Topic.find(topic_id) }
-  expose(:comments){ topic.comments }
-  expose(:comment) { Comment.find(params[:id]) }
-  expose(:all)     { false }
+  expose(:title){ title }
 
-  def index; end
-  def show; end
+  private
 
-  def all_comments
-    comments = Comment.all
-    render 'admin/comments/index', locals: { comments: comments, all: true }
+  def user_id_param
+    params[:user_id]
+  end
+
+  def topic_slug_param
+    params[:topic_slug]
+  end
+
+  def title
+    if user_id_param
+      User.find(user_id_param).email + '\'s comments'
+    elsif topic_slug_param
+      'Comments of topic'
+    else
+      'Listing comments'
+    end
+  end
+
+  def collection
+    if topic_slug_param
+      Topic.find(topic_slug_param).comments
+    elsif user_id_param
+      User.find(user_id_param).comments
+    else
+      Comment.all
+    end
   end
 end
+
 
