@@ -3,4 +3,10 @@
   color: $C_WHITE;
   padding: 10px 0;
   font-size: 1.6em;
+
+  &.admin {
+    margin-bottom: 5px;
+    padding-left: 10px;
+  }//.notice.admin
+
 }//.notice

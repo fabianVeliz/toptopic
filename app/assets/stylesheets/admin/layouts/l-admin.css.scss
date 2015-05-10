@@ -1,7 +1,12 @@
 .l-admin {
   .content {
-    padding-left: 250px;
-    padding-right: 10px;
+    padding-left: 240px;
+
+    .inner-content {
+      padding-left: 10px;
+      padding-right: 10px;
+    }//.inner-content
+
   }//.content
 
 }//.l-admin

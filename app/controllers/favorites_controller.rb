@@ -1,7 +1,8 @@
 class FavoritesController < ApplicationController
   before_action :authenticate_user!
-  expose(:slug) { params[:slug] }
-  expose(:topic){ Topic.find(slug) }
+  expose(:slug)  { params[:slug] }
+  expose(:topic) { Topic.find(slug) }
+  expose(:topics){ current_user.get_favorite_topics }
 
   def create
     unless current_user.is_already_favorite?(topic.id.to_s)
@@ -11,6 +12,8 @@ class FavoritesController < ApplicationController
       end
     end
   end
+
+  def index; end
 
   def destroy
     current_user.favorite_topics_ids.delete(topic.id.to_s)

@@ -7,6 +7,8 @@ header.l-header
       ul
         - if user_signed_in?
           li
+            = link_to 'My favorite topics', favorites_path
+          li
             = link_to 'Edit account', edit_user_registration_path
           li
             = link_to 'Sign Out', destroy_user_session_path, method: :delete

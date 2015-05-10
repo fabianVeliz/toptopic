@@ -17,7 +17,7 @@ Rails.application.routes.draw do
     resources :comments,  only: :create
   end
 
-  resources :favorites, only: [:create, :destroy], param: :slug
+  resources :favorites, only: [:create, :index, :destroy], param: :slug
   resources :reports, only: :create
 
   root 'topics#index'
